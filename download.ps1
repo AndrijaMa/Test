@@ -5,6 +5,7 @@ $url = "https://downloads.tableau.com/esdalt/"+$version_major+"."+$version_minor
 $output = "$PSScriptRoot\tableau_server.exe"
 $start_time = Get-Date
 
+#Download file
 Invoke-WebRequest -Uri $url -OutFile $output
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
 
